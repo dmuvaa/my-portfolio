@@ -1,0 +1,62 @@
+/* style.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.profile-photo {
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-photo img {
+    width: 150px; /* Adjust based on your preference */
+    height: auto;
+    border-radius: 50%; /* Circular photo */
+}
+
+.split-screen {
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+.left-pane, .right-pane {
+    width: 50%;
+    padding: 20px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.socials {
+    text-align: center;
+    padding: 20px;
+}
+
+.socials a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333; /* Adjust color as needed */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .split-screen {
+        flex-direction: column;
+    }
+
+    .left-pane, .right-pane {
+        width: 100%;
+    }
+}

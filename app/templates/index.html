@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-photo">
+            <!-- Your photo here -->
+            <img src="{{ url_for('static', filename='images/your_photo.jpg') }}" alt="Dennis Muvaa">
+
+        </div>
+        
+        <div class="split-screen">
+            <div class="left-pane">
+                <h2>Software Engineer</h2>
+                <div class="section">My Journey</div>
+                <div class="section">Skills</div>
+                <div class="section">Projects</div>
+                <div class="section">Experience</div>
+            </div>
+            <div class="right-pane">
+                <h2>Technical Writer</h2>
+                <div class="section">My Journey</div>
+                <div class="section">Skills</div>
+                <div class="section">Projects</div>
+                <div class="section">Experience</div>
+            </div>
+        </div>
+        
+        <div class="socials">
+            <!-- Social buttons here -->
+            <a href="your_linkedin_profile">LinkedIn</a>
+            <a href="your_github_profile">GitHub</a>
+            <a href="your_twitter_profile">Twitter</a>
+            <!-- Add more as needed -->
+        </div>
+    </div>
+</body>
+</html>
