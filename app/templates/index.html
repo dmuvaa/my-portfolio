@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dennis Muvaa's Portfolio</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
 </head>
 <body>
     <div class="container">
         <div class="profile-section">
             <img src="{{ url_for('static', filename='images/dmuvaa.jpg') }}" alt="Dennis Muvaa" class="profile-photo">
             <p class="intro">Hello, I'm Dennis Muvaa. A dedicated Software Engineer and Technical Writer with a passion for creating impactful solutions and conveying complex technical information clearly. Welcome to my portfolio!</p>
+        </div>
+
+        <div class="menu">
+            <a href="/blog" class="button">Blog</a>
+            <a href="/contact" class="button">Contact Me</a>
         </div>
         
         <div class="button-group">
