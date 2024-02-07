@@ -23,3 +23,12 @@ def login():
             flash('Login Unsuccessful. Please check if username and password are correct')
     
     return render_template('login.html')
+
+@auth.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('main.home'))
+
+@auth.route('/register', methods=['GET', 'POST'])
+def register():
+    
