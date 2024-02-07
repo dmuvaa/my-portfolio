@@ -31,4 +31,24 @@ def logout():
 
 @auth.route('/register', methods=['GET', 'POST'])
 def register():
+    if current_user.is_authenticated:
+        return redirect(url_for('main.home'))
+    
+    if request.method == 'POST':
+        username = request.form.get('username')
+        password = request.form.get('password')
+        hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
+
+        user_exists = User.query.filter_by(username=username).first()
+        if user_exists:
+            flash('Username already exists.', 'danger')
+            return(url_for('auth.register'))
+        
+        user = User(username=username, password=hashed_password)
+        db.session.add(user)
+        db.session.commit()
+
+        flash('Your account has been successfully created! You are now able to log in.')
+        return redirect(url_for('auth.login'))
+    return render_template('register.html')
     
