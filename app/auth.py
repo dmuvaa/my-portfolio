@@ -11,16 +11,16 @@ def login():
         return redirect(url_for('main.home'))
     
     if request.method == 'POST':
-        username = request.form.get('username')
+        email = request.form.get('email')
         password = request.form.get('password')
-        user = User.query.filter_by(username=username).first()
+        user = User.query.filter_by(email=email).first()
 
         if user and bcrypt.check_password_hash(user.password, password):
             login_user(user)
             flash('You have been logged in!', 'success')
             return redirect(url_for('main.home'))
         else:
-            flash('Login Unsuccessful. Please check if username and password are correct')
+            flash('Login Unsuccessful. Please check if email and password are correct')
     
     return render_template('login.html')
 
@@ -35,20 +35,19 @@ def register():
         return redirect(url_for('main.home'))
     
     if request.method == 'POST':
-        username = request.form.get('username')
+        email = request.form.get('email')
         password = request.form.get('password')
         hashed_password = bcrypt.generate_password_hash(password).decode('utf-8')
 
-        user_exists = User.query.filter_by(username=username).first()
+        user_exists = User.query.filter_by(email=email).first()
         if user_exists:
-            flash('Username already exists.', 'danger')
+            flash('email already exists.', 'danger')
             return(url_for('auth.register'))
         
-        user = User(username=username, password=hashed_password)
+        user = User(email=email, password=hashed_password)
         db.session.add(user)
         db.session.commit()
 
         flash('Your account has been successfully created! You are now able to log in.')
         return redirect(url_for('auth.login'))
     return render_template('register.html')
-    
