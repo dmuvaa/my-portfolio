@@ -23,9 +23,3 @@ def blog():
 @main.route('/contact')
 def contact():
     return render_template('contact.html')
-
-@login_required
-@main.route(/post-article)
-def post-article():
-    article = ArticleForm()
-    return render_template(post-article.html)
