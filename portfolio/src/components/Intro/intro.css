@@ -1,0 +1,41 @@
+#intro {
+    height: calc(100vh - 5rem);
+    width: 100vw;
+    max-width: 1150px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}
+.introSection .intoContent {
+    height: 100vh;
+    width: 100vw;
+    font-size: 3rem;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.intoContent .hello {
+    font-size: 1.75rem;
+    font-weight: 100;
+}
+
+.intoContent .introText .introName {
+    color: yellow;
+}
+
+.intoContent .introParagraph {
+    font-size: medium;
+    font-weight: 100;
+    
+}
+
+
+.introSection .introImg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    object-fit: cover;
+    height: 100vh;
+}
