@@ -1,7 +1,7 @@
 #intro {
     height: calc(100vh - 5rem);
     width: 100vw;
-    max-width: 1150px;
+    max-width: 1200px;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
@@ -17,7 +17,7 @@
 }
 .intoContent .hello {
     font-size: 1.75rem;
-    font-weight: 100;
+    font-weight: 300;
 }
 
 .intoContent .introText .introName {
@@ -26,10 +26,23 @@
 
 .intoContent .introParagraph {
     font-size: medium;
-    font-weight: 100;
-    
+    font-weight: 300;
+    letter-spacing: 1px;
 }
-
+.intoContent .btn {
+    background-color: white;
+    margin: 1rem 0;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 2rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.btn .btnImg {
+    margin: 0 .25rem;
+    font-size: 1rem;
+}
 
 .introSection .introImg {
     position: absolute;
@@ -38,4 +51,22 @@
     z-index: -1;
     object-fit: cover;
     height: 100vh;
+}
+
+@media screen and (max-width:840px) {
+    .introSection .introImg {
+        right: -10rem;
+    }
+    .intoContent {
+        font-size: 10vw;
+    }
+    .hello {
+        font-size: 4.5vw;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .introSection .introImg {
+        right: -20rem;
+    }
 }
