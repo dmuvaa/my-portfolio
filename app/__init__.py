@@ -13,8 +13,10 @@ def create_app():
     load_dotenv()
     app = Flask(__name__)
 
-    app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
-    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI')
+    app.config['SECRET_KEY'] = 'jnfndndweniw'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+mysqlconnector://hassan:munene14347@localhost/portfolio'
+    #app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
+    #app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('SQLALCHEMY_DATABASE_URI')
 
     db.init_app(app)
     bcrypt.init_app(app)
