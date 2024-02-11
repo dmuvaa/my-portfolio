@@ -1,0 +1,24 @@
+.hero_img {
+    position: relative;
+    display: inline-block; /*ensure container only takes the space of the image*/
+    max-width: 900px;
+    width: 100%;
+    height: 600px;
+    margin: 0 auto;
+    border: 2px solid var(--gray-1);
+}
+.hero_img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero_img .imageOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    pointer-events: none; /*ensure overlay does not interfere with mouse events*/
+}
