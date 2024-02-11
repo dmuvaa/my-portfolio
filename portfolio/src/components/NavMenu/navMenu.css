@@ -32,3 +32,53 @@
 .navMenu ul li a.active {
     color: white;
 }
+
+.navMenu .mobileMenuIcon {
+    width: 2.5rem;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    outline: none;
+    display: none;
+}
+.navMenu ul .closeNavIcon {
+    display: none;
+}
+
+@media only screen and (max-width:750px) {
+    /*first we remove the padding we had on the navMenu because now it mobile view*/
+    .navMenu {
+        padding: 0;
+    }
+    .navMenu .mobileMenuIcon {
+        display: block;
+    }
+    .navMenu .navItems {
+        transition: .3s ease transform;
+        background-color: var(--deep-dark);
+        padding: 2rem;
+        width: 90%;
+        max-width: 300px;
+        border-radius: 12px;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+    .navMenu .hide-navItems {
+        transform: translateY(calc(-100% - 1rem));
+    }
+    .navMenu ul .closeNavIcon {
+        display: block;
+        width: 2rem;
+        margin: 0 0 0 auto;
+        cursor: pointer;
+        * {
+            pointer-events: none;
+        }
+    }
+    .navMenu ul li {
+        display: block;
+        margin-bottom: 1rem;
+    }
+}
