@@ -5,12 +5,9 @@ import Projects from "./components/Projects/Projects";
 
 function App() {
   return (
-    <div className="App">
-      <Navbar/>
-      <IntroSection/>
-      <Skills/>
-      <Projects/>
-    </div>
+    <>
+      <h1>Welcome to Dennis portfolio project</h1>
+    </>
   )
 }
 
