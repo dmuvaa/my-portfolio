@@ -4,7 +4,7 @@
     box-sizing: border-box;
     text-decoration: none;
     background: transparent;
-    font-family: 'Roboto Regular', sans-serif;
+    font-family: 'RobotoMono Regular', sans-serif;
 }
 :root{
     --dark-bg: #262626;
@@ -16,9 +16,9 @@
 }
 body {
     font-size: 1rem;
-    font-family: 'Roboto', 'Montserrat', sans-serif;
+    font-family: 'RobotoMono Regular', 'Montserrat', sans-serif;
     background-color: var(--dark-bg);
-    color: var(--white);
+    color: var(--gray-1);
 }
 
 ul,li{

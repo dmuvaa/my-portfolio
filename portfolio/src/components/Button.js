@@ -22,7 +22,7 @@ const ButtonStyle = styled.div`
 
 const Button = (props) => {
     return (
-        <ButtonStyle outline={props.outline}>
+        <ButtonStyle outline={props.outline} className='button_wrapper'>
             <Link className='button' to={props.btnLink}>
                 {props.btnText}
             </Link>
