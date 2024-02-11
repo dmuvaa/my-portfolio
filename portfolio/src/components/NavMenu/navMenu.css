@@ -41,6 +41,13 @@
     right: 1rem;
     outline: none;
     display: none;
+    /*disable pointer events for all elements nested within
+        this element such svg so only this element will have
+        pointer events
+    */
+    * {
+        pointer-events: none;
+    }
 }
 .navMenu ul .closeNavIcon {
     display: none;
