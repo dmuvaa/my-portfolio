@@ -1,0 +1,34 @@
+.navMenu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: var(--dark-bg);
+}
+.navMenu ul {
+    max-width: 500px;
+    margin: 0 auto;
+    width: 90%;
+    text-align: center;
+}
+.navMenu ul li {
+    display: inline-block;
+    border-radius: 8px;
+    transition: .3s ease background-color;
+}
+.navMenu ul li:hover {
+    background-color: var(--deep-dark);
+}
+.navMenu ul li a {
+    display: inline-block;
+    font-family: 'Roboto';
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    color: var(--gray-1);
+    outline: none;
+}
+.navMenu ul li a.active {
+    color: white;
+}
