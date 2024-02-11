@@ -16,7 +16,6 @@ const HeroStyles = styled.div`
         align-items: center;
         justify-content: space-between;
         position: relative;
-        padding-top: 8rem
     }
     .hero_heading {
         font-size: 1.3rem;
@@ -40,7 +39,7 @@ const HeroStyles = styled.div`
         width: 100%;
         height: 600px;
         margin: 0 auto;
-        border: 2px solid var(--white);
+        border: 2px solid var(--gray-1);
         z-index: -5;
 
         .imageOverlay {
@@ -54,7 +53,8 @@ const HeroStyles = styled.div`
         }
     }
     .hero_info {
-        margin-top: -15rem;
+        margin-top: -11rem;
+        color: var(--gray-1)
     }
     .hero_social,
     .hero_scrollDown {
@@ -66,12 +66,10 @@ const HeroStyles = styled.div`
         width: 50px;
     }
     .hero_social {
-        left: 200px;
-        top: 800px;
+        left: 50px;
     }
     .hero_scrollDown {
-        right: 200px;
-        top: 800px
+        right: 50px;
     }
     .hero_social_indicator,
     .hero_scrollDown {
@@ -99,7 +97,6 @@ const HeroStyles = styled.div`
     .hero_social {
         .hero_social_text {
             ul {
-                text-align: center;
                 li {
                     margin-bottom: .8rem;
                 }
@@ -127,10 +124,11 @@ const HeroStyles = styled.div`
             height: 300px;
         }
         .hero_info {
-            margin-top: 2.5rem;
+            margin-top: 2rem;
         }
         .hero_social {
             left: 0px;
+            bottom: -10px;
             width: 20px;
             .hero_social_indicator {
                 width: 20px;

@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const ButtonStyle = styled.div`
-    margin-top: 2rem;
     .button {
+        margin-top: 1.3rem;
         font-size: 1.25rem;
         background-color: ${(props) => props.outline ? 'transparent' : 'var(--gray-1)'};
         padding: .7em 2em;
@@ -14,8 +14,8 @@ const ButtonStyle = styled.div`
         color: ${(props) => props.outline ? 'var(--white)' : 'var(--black)'};
     }
     @media only screen and (max-width: 750px) {
-        .btn_container .button {
-            font-size: .85rem;
+        .button {
+            font-size: .9rem;
         }
     }
 `;
