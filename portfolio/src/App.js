@@ -1,12 +1,12 @@
-import Navbar from "./components/Navbar/navbar";
-import IntroSection from "./components/Intro/Intro";
-import Skills from "./components/Skills/Skills";
-import Projects from "./components/Projects/Projects";
+import NavMenu from "./components/NavMenu";
+import { BrowserRouter as BRouter } from 'react-router-dom'
 
 function App() {
   return (
     <>
-      <h1>Welcome to Dennis portfolio project</h1>
+      <BRouter>
+        <NavMenu/>
+      </BRouter>
     </>
   )
 }
