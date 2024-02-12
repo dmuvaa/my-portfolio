@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import projectImg from '../assets/images/projectImg.png';
 import styled from 'styled-components';
 
 const ProjectItemStyles = styled.div`
@@ -25,6 +24,7 @@ const ProjectItemStyles = styled.div`
     }
     .projectItemName {
         font-size: 1.4rem;
+        color: yellow;
     }
     .projectItemDescription {
         font-size: 1rem;
