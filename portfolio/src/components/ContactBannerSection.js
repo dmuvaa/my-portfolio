@@ -8,6 +8,7 @@ const ContactBannerSectionStyles = styled.div`
         background-color: var(--deep-dark);
         border-radius: 12px;
         padding: 3.125rem 0;
+        margin-bottom: 3.125rem;
         text-align: center;
     }
     .contactBannerHeading {

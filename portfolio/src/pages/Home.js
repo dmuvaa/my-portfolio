@@ -5,6 +5,7 @@ import ServicesSection from '../components/ServicesSection';
 import ProjectsSection from "../components/ProjectsSection";
 import CompaniesSection from "../components/CompaniesSection";
 import ContactBannerSection from "../components/ContactBannerSection";
+import FooterSection from "../components/FooterSection";
 
 const Home = () => {
     return (
@@ -15,6 +16,7 @@ const Home = () => {
             <ProjectsSection/>
             <CompaniesSection/>
             <ContactBannerSection/>
+            <FooterSection/>
         </div>
         
     )
