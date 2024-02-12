@@ -42,13 +42,13 @@ const ProjectItem = (props) => {
   return (
     <ProjectItemStyles>
         <Link to="/projects" className='projectItemImg'>
-            <img src={projectImg} alt='projectImg'/>
+            <img src={props.img} alt='projectImg'/>
         </Link>
         <div className='projectItemInfo'>
             <Link to="/projects">
-                <h3 className='projectItemName'>project1</h3>
+                <h3 className='projectItemName'>{props.title}</h3>
             </Link>
-            <p className='projectItemDescription'>lorem ipsum dolot sit amet nion amene heknaanhe dhhdksosn</p>
+            <p className='projectItemDescription'>{props.description}</p>
         </div>
     </ProjectItemStyles>
   )
