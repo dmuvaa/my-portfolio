@@ -12,7 +12,8 @@ const HeroParagraph = styled.div`
 
     @media only screen and (max-width: 750px) {
         .hero_paragraph {
-            font-size: .9rem;   
+            font-size: .9rem;
+            font-family: 'Montserrat Regular'; 
         }
     }
 `;
