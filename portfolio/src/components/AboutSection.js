@@ -6,9 +6,10 @@ import AboutImg from '../assets/images/about-sec-img.png';
 import styled from 'styled-components';
 
 const AboutSectionStyle = styled.div`
-    padding: 6rem;
+    padding: 6rem 0;
     .container {
         display: flex;
+
         align-items: center;
         justify-content: flex-start;
         text-align: left;

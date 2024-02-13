@@ -4,7 +4,7 @@ import AboutSection from '../components/AboutSection';
 const About = () => {
   return (
     <div>
-      <AboutSection/>
+      <h1>About page</h1>
     </div>
   )
 }
