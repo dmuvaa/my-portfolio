@@ -180,7 +180,8 @@ const HeroSection = () => {
                         I am a software engineer who thrive on building robust and scalable solutions to complex problems. 
                         With expertise in Python, Devops.
                     </PText>
-                    <Button btnLink="projects" btnText="See my works" outline={false}/>              
+                    <Button btnLink="projects" btnText="See my works" outline={false}/>
+                    <Button btnLink="" btnText="Download CV" outline={false}/>            
                 </div>
                 <div className='hero_social'>
                     <div className='hero_social_indicator'>

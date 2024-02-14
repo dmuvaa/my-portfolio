@@ -5,7 +5,7 @@ import Home from './pages/Home';
 import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
 import FooterSection from "./components/FooterSection";
-import SmoothScrollbarElement from "./components/SmoothScrollbar";
+import Scroll from "./components/SmoothScrollbar";
 
 
 function App() {
@@ -13,15 +13,14 @@ function App() {
     <>
       <BRouter>
         <NavMenu/>
-        <SmoothScrollbarElement>
-          <Routes>
-              <Route path="/" element={<Home/>}/>
-              <Route path="/about" element={<AboutPage/>}/>
-              <Route path="/projects" element={<ProjectsPage/>}/>
-              <Route path="/contact" element={<ContactPage/>}/>
-            </Routes>
-            <FooterSection/>
-        </SmoothScrollbarElement>
+        <Scroll/>
+        <Routes>
+            <Route path="/" element={<Home/>}/>
+            <Route path="/about" element={<AboutPage/>}/>
+            <Route path="/projects" element={<ProjectsPage/>}/>
+            <Route path="/contact" element={<ContactPage/>}/>
+        </Routes>
+        <FooterSection/>
       </BRouter>
     </>
   )

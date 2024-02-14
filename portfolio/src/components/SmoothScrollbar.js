@@ -1,41 +1,33 @@
-import { Scrollbar } from "smooth-scrollbar-react";
-import SmoothScrollbar from "smooth-scrollbar";
-import { useEffect, useRef } from "react";
-import { useLocation } from "react-router-dom";
+import { useEffect } from 'react';
+import Scrollbar from 'smooth-scrollbar';
+import OverscrollPlugin from 'smooth-scrollbar/plugins/overscroll';
 
-const SmoothScrollbarElement = (props) => {
-  const scrollbarRef = useRef(null);
-  const location = useLocation();
+let overscrollOptions = {
+    enable: true,
+    effect: 'bounce',
+    damping: 0.15,
+    maxOverScroll: 150
+}
 
-  useEffect(() => {
-    if (scrollbarRef.current) {
-      const scrollbar = scrollbarRef.current.scrollbar;
-      if (scrollbar) {
-        // Initialize smooth scrollbar
-        SmoothScrollbar.init(scrollbar, {
-          damping: 0.2,
-          continuousScrolling: true,
-          renderByPixels: true,
-        });
-      }
+let options = {
+    damping: 0.07,
+    plugins: {
+        overscroll: {...overscrollOptions}
     }
-  }, []);
+}
 
-  useEffect(() => {
-    if (scrollbarRef.current && location.key) {
-      const scrollbar = scrollbarRef.current.scrollbar;
-      if (scrollbar) {
-        // Scroll to top when location changes
-        scrollbar.setPosition(0, 0);
-      }
-    }
-  }, [location.key]);
+const Scroll = () => {
 
-  return (
-    <Scrollbar ref={scrollbarRef}>
-      {props.children}
-    </Scrollbar>
-  );
-};
+    useEffect(() => {
+        Scrollbar.use(OverscrollPlugin)
+        Scrollbar.init(document.body, options);
 
-export default SmoothScrollbarElement;
+        return () => {
+            if (Scrollbar) Scrollbar.destroy(document.body);
+        }
+    },[])
+    return null;
+}
+export default Scroll;
+
+
