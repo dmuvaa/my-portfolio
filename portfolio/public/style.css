@@ -45,8 +45,8 @@ button{
 /*smooth scrolling */
 [data-scrollbar] {
     height: 100vh;
-    overflow: hidden;
-    background-color: var(--gray-1);
+    /* overflow: hidden; */
+    /* background-color: var(--gray-1); */
 }
 
 [data-scrollbar] .scroll-content {
